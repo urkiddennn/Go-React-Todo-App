@@ -1,0 +1,16 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+bin = "./tmp/main.exe" # <-- Add .exe here
+cmd = "go build -o ./tmp/main.exe" # <-- Add .exe here
+exclude_dir = ["assets", "tmp", "vendor", "client/*"]
+include = ["**/*.go"]
+ignore = ["tmp/*"]
+log = "air.log"
+delay = 0 # ms
+[color]
+# Customize each part's color. If no color found, use the raw app log.
+main = "magenta"
+watcher = "cyan"
+build = "yellow"
